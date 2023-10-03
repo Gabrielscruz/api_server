@@ -2,7 +2,12 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// datasource db {
+//   provider = "sqlserver"
+//   url      = env("DATABASE_URL")
+// }
+
 datasource db {
-  provider = "sqlserver"
-  url      = env("DATABASE_URL")
+  provider = "postgresql"
+  url      = "postgresql://erpcloud:aaa123456@@localhost:5432/postgres?schema=sample"
 }
